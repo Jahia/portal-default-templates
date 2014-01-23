@@ -39,7 +39,7 @@
                 <i class="icon-cog edit_switch"></i>
             </c:if>
             <i class="icon-minus minimize_action"></i>
-            <c:if test="${widgetHasEditView && widgetIsEditable}">
+            <c:if test="${widgetIsEditable}">
                 <i class="icon-remove delete_action"></i>
             </c:if>
         </div>
