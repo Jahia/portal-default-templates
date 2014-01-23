@@ -1,0 +1,22 @@
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+
+[jmix:portalComponentContent] > jmix:droppableContent, jmix:accessControllableContent mixin
+
+[jnt:portalToolbar] > jmix:portalComponentContent, jmix:studioOnly, jnt:content, mix:title
+
+//---------------------------------------------------------
+// Widgets
+//---------------------------------------------------------
+
+[jnt:googleMapWidget] > jnt:content, jmix:portalWidget
+- j:height (long) = 500 indexed=no autocreated
+
+[jnt:helloWorldWidget] > jnt:content, jmix:portalWidget
+
+[jnt:googleFeedWidget] > jnt:content, jmix:portalWidget
+ - url (string) indexed=no
+ - nbEntries (long) = 10 indexed=no autocreated
+
+[jnt:twitterPortalWidget] > jnt:twitterWidget, jmix:portalWidget
+- widgetId (string) indexed=no
