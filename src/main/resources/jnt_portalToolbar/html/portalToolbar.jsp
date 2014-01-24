@@ -31,11 +31,11 @@
 <div id="portal_toolbar" class="portal_toolbar" ng-app="portalToolbar">
     <div ng-controller="navCtrl">
         <ul class="nav nav-tabs" ng-init="loadTabs()">
-            <li ng-class="isCurrentTab(tab.url) ? 'active' : ''" ng-repeat="tab in tabs">
+            <li ng-class="isCurrentTab(tab) ? 'active' : ''" ng-repeat="tab in tabs">
                 <a href="{{tab.url}}">{{tab.name}}</a>
             </li>
 
-            <c:if test="${jcr:isNodeType(portalNode, portalModelNT) and !portal:userPortalExist(portalNode)}">
+            <c:if test="${jcr:isNodeType(portalNode, portalModelNT) and !portal:userPortalExist(portalNode) and portalNode.properties['j:enabled'].boolean}">
                 <li class="right">
                     <button type="button" class="customize-btn btn btn-inverse" ng-click="copyModel()">Customize</button>
                 </li>

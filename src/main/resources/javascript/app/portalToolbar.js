@@ -85,8 +85,8 @@ portalToolbar.controller('navCtrl', function test($scope) {
         });
     };
 
-    $scope.isCurrentTab = function (url) {
-        return url == window.location.pathname;
+    $scope.isCurrentTab = function (tab) {
+        return tab.path = portal.portalTabPath;
     };
 
     $scope.deleteTab = function(){
