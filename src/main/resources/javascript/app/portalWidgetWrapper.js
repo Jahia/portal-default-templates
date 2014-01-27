@@ -48,14 +48,13 @@ Jahia.Portal.AdvancedWidgetWrapper.prototype = {
 
         resizeSwitch.on("click", function(){
             if(instance.widget._state != "full"){
-                var fullHref = instance.widget._portal.baseURL + instance.widget._portal.portalTabPath + "."
-                    + instance.widget._portal.fullTemplate + ".html?w=" + instance.widgetIdentifier + "&w_state=full";
                 if(instance.haveFullView) {
-                    fullHref += "&w_view=full";
+                    portal.loadSingleWidget(instance.widget._portal.fullTemplate, instance.widgetIdentifier, "full", "full");
+                }else {
+                    portal.loadSingleWidget(instance.widget._portal.fullTemplate, instance.widgetIdentifier, "full");
                 }
-                window.location.href = fullHref;
             }else {
-                window.location.href = instance.widget._portal.baseURL + instance.widget._portal.portalTabPath + ".html";
+                portal.reloadTab();
             }
         });
     },
