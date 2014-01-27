@@ -14,11 +14,13 @@
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 <%--@elvariable id="nodetype" type="org.jahia.services.content.nodetypes.ExtendedNodeType"--%>
 <c:set var="portalMixin" value="<%= PortalConstants.JMIX_PORTAL %>"/>
+<c:set var="fullTemplateProp" value="<%= PortalConstants.J_FULL_TEMPLATE %>"/>
 <c:set var="portalNode" value="${jcr:getParentOfType(currentNode, portalMixin)}"/>
 
 <c:set var="widgetHasEditView"
        value="${portal:getSpecificView(currentNode.primaryNodeTypeName, 'edit', portalNode) != null}"/>
 <c:set var="widgetIsEditable" value="${jcr:hasPermission(currentNode, 'jcr:write_live')}"/>
+<c:set var="widgetFullView" value="${portal:getSpecificView(currentNode.primaryNodeTypeName, 'full', portalNode)}"/>
 
 <template:addResources type="javascript" resources="app/portalWidgetWrapper.js"/>
 <template:addResources type="css" resources="box.advanced.red.css"/>
@@ -26,7 +28,7 @@
 <script type="text/javascript">
     // skin javascript controller
     $(document).ready(function(){
-        new Jahia.Portal.AdvancedWidgetWrapper("w${currentNode.identifier}", ${widgetIsEditable});
+        new Jahia.Portal.AdvancedWidgetWrapper("${currentNode.identifier}", ${widgetIsEditable}, ${widgetFullView != null});
     });
 </script>
 
@@ -35,6 +37,7 @@
         <h4 class="panel-title">${currentNode.properties["jcr:title"].string}</h4>
 
         <div class="widget-tools">
+            <i class="resize_switch"></i>
             <c:if test="${widgetHasEditView && widgetIsEditable}">
                 <i class="icon-cog edit_switch"></i>
             </c:if>

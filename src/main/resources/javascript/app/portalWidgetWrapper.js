@@ -1,10 +1,13 @@
-Jahia.Portal.AdvancedWidgetWrapper = function (widgetId, editable) {
+Jahia.Portal.AdvancedWidgetWrapper = function (widgetIdentifier, editable, haveFullView) {
     this._minimize = true;
+    this.widgetIdentifier = widgetIdentifier;
     this.widget = {};
     this.$widget = {};
     this.editable = editable;
+    this.haveFullView = haveFullView;
 
-    this.init(widgetId);
+
+    this.init("w" + widgetIdentifier);
 };
 
 Jahia.Portal.AdvancedWidgetWrapper.prototype = {
@@ -13,19 +16,46 @@ Jahia.Portal.AdvancedWidgetWrapper.prototype = {
         instance.widget = portal.getCurrentWidget(widgetId);
         instance.$widget = instance.widget.getjQueryWidget();
         if(instance.editable){
-            instance.switchEditListener();
+            instance.switchEditViewListener();
             instance.deleteListener();
+        }
+        if(instance.widget._portal.fullTemplate){
+            instance.switchFullStateListener();
         }
         instance.minimizeListener();
     },
 
-    switchEditListener: function() {
+    switchEditViewListener: function() {
         var instance = this;
         instance.$widget.find(".edit_switch").on("click", function(){
-            if (instance.widget.state != "edit") {
+            if (instance.widget._currentView != "edit") {
                 instance.widget.load("edit");
             } else {
                 instance.widget.load();
+            }
+        });
+    },
+
+    switchFullStateListener: function() {
+        var instance = this;
+        var resizeSwitch = instance.$widget.find(".resize_switch");
+
+        if(instance.widget._state == "full"){
+            resizeSwitch.addClass("icon-resize-small");
+        }else {
+            resizeSwitch.addClass("icon-resize-full");
+        }
+
+        resizeSwitch.on("click", function(){
+            if(instance.widget._state != "full"){
+                var fullHref = instance.widget._portal.baseURL + instance.widget._portal.portalTabPath + "."
+                    + instance.widget._portal.fullTemplate + ".html?w=" + instance.widgetIdentifier + "&w_state=full";
+                if(instance.haveFullView) {
+                    fullHref += "&w_view=full";
+                }
+                window.location.href = fullHref;
+            }else {
+                window.location.href = instance.widget._portal.baseURL + instance.widget._portal.portalTabPath + ".html";
             }
         });
     },

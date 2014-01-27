@@ -14,5 +14,5 @@
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 
 <p>
-    Hello world
+    Hello world edit
 </p>
