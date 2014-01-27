@@ -74,7 +74,7 @@ portalToolbar.controller('navCtrl', function test($scope) {
     $scope.canBeDeleted = false;
     $scope.tabs = [];
 
-    $scope.loadTabs = function () {
+    $scope.init = function () {
         portal.getTabs(function (data) {
             $scope.$apply(function () {
                 $scope.tabs = data;
@@ -86,7 +86,7 @@ portalToolbar.controller('navCtrl', function test($scope) {
     };
 
     $scope.isCurrentTab = function (tab) {
-        return tab.path = portal.portalTabPath;
+        return tab.path == portal.portalTabPath;
     };
 
     $scope.deleteTab = function(){

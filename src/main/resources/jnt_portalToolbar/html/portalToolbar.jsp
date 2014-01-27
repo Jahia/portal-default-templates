@@ -28,9 +28,9 @@
 <template:addResources type="javascript" resources="app/portalToolbar.js" />
 <template:addResources type="css" resources="portal-toolbar.css"/>
 
-<div id="portal_toolbar" class="portal_toolbar" ng-app="portalToolbar">
-    <div ng-controller="navCtrl">
-        <ul class="nav nav-tabs" ng-init="loadTabs()">
+<div id="portal_toolbar" class="portal_toolbar">
+    <div ng-controller="navCtrl" ng-init="init()">
+        <ul class="nav nav-tabs">
             <li ng-class="isCurrentTab(tab) ? 'active' : ''" ng-repeat="tab in tabs">
                 <a href="{{tab.url}}">{{tab.name}}</a>
             </li>
@@ -130,3 +130,8 @@
         </div>
     </c:if>
 </div>
+
+<script type="text/javascript">
+    // Boostrap app
+    angular.bootstrap(document.getElementById("portal_toolbar"),['portalToolbar']);
+</script>
