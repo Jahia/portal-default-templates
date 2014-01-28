@@ -1,6 +1,10 @@
 <jnt = 'http://www.jahia.org/jahia/nt/1.0'>
 <jmix = 'http://www.jahia.org/jahia/mix/1.0'>
 
+//---------------------------------------------------------
+// Portal components
+//---------------------------------------------------------
+
 [jmix:portalComponentContent] > jmix:droppableContent, jmix:accessControllableContent mixin
 
 [jnt:portalToolbar] > jmix:portalComponentContent, jmix:studioOnly, jnt:content, mix:title
@@ -20,3 +24,9 @@
 
 [jnt:twitterPortalWidget] > jnt:twitterWidget, jmix:portalWidget
 - widgetId (string) indexed=no
+
+//---------------------------------------------------------
+// Site components
+//---------------------------------------------------------
+
+[jnt:userPortals] > jnt:content, jmix:portalComponentContent
