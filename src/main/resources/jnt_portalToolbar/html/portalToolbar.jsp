@@ -84,7 +84,7 @@
                 <h3 id="widgetModalLabel"><fmt:message key="jnt_portalToolbar.addWidget.tooltip"/></h3>
             </div>
             <div class="modal-body">
-                <form class="form-inline" role="form">
+                <form class="form-inline" role="form" name="widgetForm">
                     <div class="form-group row-fluid">
                         <div class="span4">
                             <label for="widget_desiredName"><fmt:message key="jnt_portalToolbar.addWidgetForm.name"/>:</label>
@@ -93,10 +93,12 @@
                     </div>
 
                     <div class="form-group row-fluid">
+
                         <div class="span4">
                             <label><fmt:message key="jnt_portalToolbar.addWidgetForm.type"/>:</label>
                         </div>
                         <input class="span5 right" ng-model="query" type="text" placeholder="Search...">
+                        <input type="hidden" ng-model="desiredWidget" required/>
                     </div>
 
                     <table class="table table-bordered widgets-table">
@@ -110,7 +112,7 @@
             </div>
             <div class="modal-footer">
                 <button class="btn" data-dismiss="modal" ng-click="cancel()"><fmt:message key="cancel"/></button>
-                <button class="btn btn-primary" ng-click="addWidget()"><fmt:message key="add"/></button>
+                <button class="btn btn-primary" ng-disabled="widgetForm.$invalid" ng-click="addWidget()"><fmt:message key="add"/></button>
             </div>
         </div>
 
