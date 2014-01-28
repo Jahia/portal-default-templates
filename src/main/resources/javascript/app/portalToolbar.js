@@ -5,6 +5,7 @@ portalToolbar.controller('widgetsCtrl', function ctrl($scope) {
     $scope.widgets = [];
     $scope.desiredName = "";
     $scope.desiredWidget = "";
+    $scope.query = "";
 
     $scope.init = function (modalId) {
         $scope.modalId = modalId;
@@ -33,7 +34,11 @@ portalToolbar.controller('widgetsCtrl', function ctrl($scope) {
         $('#' + $scope.modalId).modal('hide');
         $scope.desiredName = "";
         $scope.desiredWidget = "";
-    }
+    };
+
+    $scope.search = function (widget) {
+        return !!((widget.name.toLowerCase().indexOf($scope.query.toLowerCase() || '') !== -1 || widget.displayableName.toLowerCase().indexOf($scope.query.toLowerCase() || '') !== -1));
+    };
 });
 
 portalToolbar.controller('tabCtrl', function test($scope) {
@@ -83,6 +88,7 @@ portalToolbar.controller('navCtrl', function test($scope) {
                 }
             });
         });
+        $(".toolbar-tooltip").tooltip();
     };
 
     $scope.isCurrentTab = function (tab) {
