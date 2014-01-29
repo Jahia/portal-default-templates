@@ -7,10 +7,18 @@
 
 .widget .widget-header {
     border-bottom: 1px solid;
-    background-color: #3399ff;
-    border-color: #bce8f1;
     cursor: move;
     position: relative;
+}
+
+.widget-blue .widget-header {
+    background-color: #3399ff;
+    border-color: #bce8f1;
+}
+
+.widget-green .widget-header {
+    background-color: #46a546;
+    border-color: #b1f1b8;
 }
 
 .widget .widget-header h4{

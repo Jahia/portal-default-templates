@@ -71,7 +71,7 @@
                 </div>
                 <div class="row-fluid">
                     <fmt:message key="jnt_portalToolbar.tabForm.widgetsSkin"/>:
-                    <select ng-model='form.widgetsSkin.key' required ng-options='option.key as option.name for option in form.allowedWidgetsSkins'></select>
+                    <select ng-model='form.widgetSkin.key' required ng-options='option.key as option.name for option in form.allowedWidgetsSkins'></select>
                 </div>
             </form>
         </script>
