@@ -24,43 +24,48 @@
 <c:set var="portalNode" value="${jcr:getParentOfType(currentNode, portalMix)}"/>
 <c:set var="currentWidgetSkin" value="${currentNode.properties[widgetSkinProp].string}"/>
 
-<h2>
-    Edit: ${currentNode.displayableName}
-</h2>
+<template:addResources type="css" resources="commonsWidget.css"/>
 
-<div class="box-1">
-    <form action="<c:url value="${url.base}${currentNode.path}"/>" method="POST">
-        <input type="hidden" name="jcrRedirectTo" value="<c:url value="${url.base}${portalTabNode.path}"/>">
-        <input type="hidden" name="jcrNodeType" value="${currentNode.primaryNodeTypeName}"/>
+<div class="widget-edit">
+    <h2>
+        Edit: ${currentNode.displayableName}
+    </h2>
 
-        <div class="row-fluid">
-            <div class="span12">
-                <label>
-                    <span><fmt:message key="title"/>:</span>
-                    <input type="text" name="jcr:title" value="${currentNode.displayableName}"/>
-                </label>
+    <div class="box-1">
+        <form action="<c:url value="${url.base}${currentNode.path}"/>" method="POST">
+            <input type="hidden" name="jcrRedirectTo" value="<c:url value="${url.base}${portalTabNode.path}"/>">
+            <input type="hidden" name="jcrNodeType" value="${currentNode.primaryNodeTypeName}"/>
+
+            <div class="row-fluid">
+                <div class="span12">
+                    <label>
+                        <span><fmt:message key="title"/>:</span>
+                        <input type="text" name="jcr:title" value="${currentNode.displayableName}"/>
+                    </label>
+                </div>
             </div>
-        </div>
 
-        <div class="row-fluid">
-            <div class="span12">
-                <label>
-                    <span>skin:</span>
-                    <select name="j:widgetSkin">
-                        <c:forEach items="${portal:getViewsSet(portalWidgetMix, portalNode)}" var="skin">
-                            <option value="${skin.key}" ${currentWidgetSkin == skin.key ? 'selected="selected"' : ''}><fmt:message key="${skin.displayName}"/></option>
-                        </c:forEach>
-                    </select>
-                </label>
+            <div class="row-fluid">
+                <div class="span12">
+                    <label>
+                        <span>skin:</span>
+                        <select name="j:widgetSkin">
+                            <c:forEach items="${portal:getViewsSet(portalWidgetMix, portalNode)}" var="skin">
+                                <option value="${skin.key}" ${currentWidgetSkin == skin.key ? 'selected="selected"' : ''}>
+                                    <fmt:message key="${skin.displayName}"/></option>
+                            </c:forEach>
+                        </select>
+                    </label>
+                </div>
             </div>
-        </div>
 
-        <div class="row-fluid">
-            <div class="span12">
-                <button class="btn btn-primary" type="submit">
-                    <fmt:message key="save"/>
-                </button>
+            <div class="row-fluid">
+                <div class="span12">
+                    <button class="btn btn-primary" type="submit">
+                        <fmt:message key="save"/>
+                    </button>
+                </div>
             </div>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>

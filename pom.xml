@@ -2,11 +2,11 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <artifactId>jahia-modules</artifactId>
-        <groupId>org.jahia.modules</groupId>
-        <version>7.0.0.0-SNAPSHOT</version>
-    </parent>
+  <parent>
+    <groupId>org.jahia.modules</groupId>
+    <artifactId>jahia-modules</artifactId>
+    <version>7.0.0.0-SNAPSHOT</version>
+  </parent>
   <artifactId>templates-portal</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>bundle</packaging>
@@ -23,11 +23,23 @@
       <version>2.0.0-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>org.jahia.modules</groupId>
+      <artifactId>portal-core</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <scope>provided</scope>
+    </dependency>
       <dependency>
-          <groupId>org.jahia.modules</groupId>
-          <artifactId>portal-core</artifactId>
-          <version>1.0-SNAPSHOT</version>
-          <scope>provided</scope>
+          <groupId>atg.taglib.json</groupId>
+          <artifactId>json-taglib</artifactId>
+          <version>0.4.1</version>
+          <scope>compile</scope>
+          <exclusions>
+              <exclusion>
+                  <groupId>commons-el</groupId>
+                  <artifactId>commons-el</artifactId>
+              </exclusion>
+          </exclusions>
       </dependency>
   </dependencies>
   <repositories>
@@ -53,7 +65,7 @@
         <configuration>
           <instructions>
             <Jahia-Module-Type>templatesSet</Jahia-Module-Type>
-            <Jahia-Depends>default,bootstrap-components,bootstrap,portal-core,twitter</Jahia-Depends>
+            <Jahia-Depends>bootstrap,bootstrap-components,contact,default,event,facets,search,teasers,portal-core,twitter</Jahia-Depends>
           </instructions>
         </configuration>
       </plugin>

@@ -21,7 +21,7 @@
 <div id="google-feed-${currentNode.identifier}" ng-controller="google-feed-edit-ctrl"
      ng-init="init('google-feed-${currentNode.identifier}')" class="widget-edit">
     <h2>
-        <fmt:message key="jnt_googleFeedWidget"/> {{test}}
+        <fmt:message key="jnt_googleFeedWidget"/>
     </h2>
 
     <div class="box-1">
