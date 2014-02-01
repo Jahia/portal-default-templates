@@ -5,4 +5,6 @@
     <bean id="linkInitializer" class="com.jahia.modules.initializers.LinkInitializer">
         <property name="key" value="linkInitializer"/>
     </bean>
+
+	<bean id="docTreeAction" class="com.jahia.modules.action.DocTreeAction"/>
 </beans>
