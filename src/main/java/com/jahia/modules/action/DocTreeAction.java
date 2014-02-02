@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.jahia.bin.Action;
 import org.jahia.bin.ActionResult;
+import org.jahia.bin.Render;
 import org.jahia.services.content.JCRContentUtils;
 import org.jahia.services.content.JCRNodeWrapper;
 import org.jahia.services.content.JCRSessionWrapper;
@@ -28,7 +29,11 @@ public class DocTreeAction extends Action{
 
 	@Override
 	public ActionResult doExecute(HttpServletRequest req, RenderContext renderContext, Resource resource, JCRSessionWrapper session, Map<String, List<String>> parameters, URLResolver urlResolver) throws Exception {
-		return new ActionResult(HttpServletResponse.SC_OK, null, buildTree(resource.getNode()));
+		String path = "";
+		if (parameters.containsKey("path")) {
+			path = parameters.get("path").get(0);
+		}
+		return new ActionResult(HttpServletResponse.SC_OK, null, buildTree(session.getNode(path)));
 	}
 
 	private JSONObject buildTree(JCRNodeWrapper node) throws JSONException, RepositoryException {

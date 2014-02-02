@@ -19,11 +19,10 @@
 <template:addResources type="javascript" resources="app/documentBrowserWidget.js" />
 <template:addResources type="css" resources="commonsWidget.css"/>
 <template:addResources type="css" resources="app/docBrowserWidget.css"/>
-<jcr:node var="systemSite" path="/sites/systemsite"/>
 
-<div class="docBrowserWidget" id="document-browser-${currentNode.identifier}" ng-controller="document-browser-edit-ctrl"
-     ng-init="init('document-browser-${currentNode.identifier}', '<c:url value="${url.base}/sites"/>')"
-	 class="widget-edit">
+<div class="docBrowserWidget widget-edit" id="document-browser-${currentNode.identifier}" ng-controller="document-browser-edit-ctrl"
+     ng-init="init('document-browser-${currentNode.identifier}'
+     , '<c:url value="${url.base}${currentNode.path}"/>')">
 
     <h2>
         Document browser

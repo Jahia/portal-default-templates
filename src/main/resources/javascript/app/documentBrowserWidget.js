@@ -21,13 +21,13 @@ documentBrowserWidget.controller('document-browser-ctrl', function ctrl($scope) 
 		return item.nodeType == "jnt:file";
 	};
 
-	$scope.init = function (id, url) {
+	$scope.init = function (id, url, path) {
 		$scope.htmlId = id;
 
 		$.ajax({
 			type: "GET",
 			dataType: "json",
-			url: url + ".docTree.do"
+			url: url + ".docTree.do?path=" + path
 		}).done(function (data) {
 				$scope.$apply(function () {
 					$scope.item = data;
@@ -90,7 +90,7 @@ documentBrowserWidget.controller('document-browser-edit-ctrl', function test($sc
 		$.ajax({
 			type: "GET",
 			dataType: "json",
-			url: url + ".docTree.do"
+			url: url + ".docTree.do?path=/sites"
 		}).done(function (data) {
 				$scope.$apply(function () {
 					$scope.item = data;
