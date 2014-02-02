@@ -20,7 +20,8 @@
 
 <div class="docBrowserWidget" id="document-browser-${currentNode.identifier}"
 	 ng-controller="document-browser-ctrl"
-	 ng-init="init('document-browser-${currentNode.identifier}', '<c:url value="${url.base}/sites"/>')">
+	 ng-init="init('document-browser-${currentNode.identifier}'
+	 , '<c:url value="${url.base}${currentNode.properties['rootPath'].string}"/>')">
 
 	<script type="text/ng-template" id="treeItem.html">
 		<span><i ng-class="getIcon(item)"></i> {{item.title}}</span>

@@ -53,10 +53,49 @@ documentBrowserWidget.controller('document-browser-ctrl', function ctrl($scope) 
 });
 
 documentBrowserWidget.controller('document-browser-edit-ctrl', function test($scope) {
+	$scope.item = "";
+	$scope.doc = {};
+	$scope.showSelectRootPath = false;
 	$scope.widget = {};
 
-	$scope.init = function (widgetId) {
+	$scope.getIcon = function(item){
+		var nodetype = item.nodeType;
+		if(nodetype == "jnt:virtualsitesFolder"){
+			return "icon-home";
+		}else if(nodetype == "jnt:virtualsite"){
+			return "icon-globe";
+		}else if(nodetype == "jnt:folder"){
+			return "icon-folder-open";
+		}else if(nodetype == "jnt:file"){
+			return "icon-file";
+		}
+	};
+
+	$scope.isFile = function(item){
+		return item.nodeType == "jnt:file";
+	};
+
+	$scope.openSelectRootPath = function() {
+		$scope.showSelectRootPath = true;
+	};
+
+	$scope.selectRootPath = function(item) {
+		$scope.showSelectRootPath = false;
+		$scope.doc.rootPath = item.path;
+	};
+
+	$scope.init = function (widgetId, url) {
 		$scope.widget = portal.getCurrentWidget(widgetId);
+
+		$.ajax({
+			type: "GET",
+			dataType: "json",
+			url: url + ".docTree.do"
+		}).done(function (data) {
+				$scope.$apply(function () {
+					$scope.item = data;
+				});
+			});
 	};
 
 	$scope.update = function (form) {

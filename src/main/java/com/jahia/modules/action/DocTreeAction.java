@@ -36,6 +36,7 @@ public class DocTreeAction extends Action{
 		item.put("title", node.getDisplayableName());
 		item.put("nodeType", node.getPrimaryNodeTypeName());
 		item.put("url", node.getUrl());
+		item.put("path", node.getPath());
 
 		JSONArray itemChilds = new JSONArray();
 		List<JCRNodeWrapper> childs = JCRContentUtils.getChildrenOfType(node, "jnt:virtualsite,jnt:folder,jnt:file");

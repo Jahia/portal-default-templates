@@ -4,6 +4,7 @@
 <%@ taglib prefix="utility" uri="http://www.jahia.org/tags/utilityLib" %>
 <%@ taglib prefix="template" uri="http://www.jahia.org/tags/templateLib" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="ui" uri="http://www.jahia.org/tags/uiComponentsLib"%>
 <%--@elvariable id="currentNode" type="org.jahia.services.content.JCRNodeWrapper"--%>
 <%--@elvariable id="out" type="java.io.PrintWriter"--%>
 <%--@elvariable id="script" type="org.jahia.services.render.scripting.Script"--%>
@@ -17,11 +18,15 @@
 <template:addResources type="javascript" resources="angular.min.js" />
 <template:addResources type="javascript" resources="app/documentBrowserWidget.js" />
 <template:addResources type="css" resources="commonsWidget.css"/>
+<template:addResources type="css" resources="app/docBrowserWidget.css"/>
+<jcr:node var="systemSite" path="/sites/systemsite"/>
 
-<div id="document-browser-${currentNode.identifier}" ng-controller="document-browser-edit-ctrl"
-     ng-init="init('document-browser-${currentNode.identifier}')" class="widget-edit">
+<div class="docBrowserWidget" id="document-browser-${currentNode.identifier}" ng-controller="document-browser-edit-ctrl"
+     ng-init="init('document-browser-${currentNode.identifier}', '<c:url value="${url.base}/sites"/>')"
+	 class="widget-edit">
+
     <h2>
-        <fmt:message key="jnt_googleFeedWidget"/>
+        Document browser
     </h2>
 
     <div class="box-1">
@@ -34,10 +39,37 @@
                     <label>
                         <span><fmt:message key="title"/>:</span>
                         <input type="text" name="jcr:title" ng-model="doc['jcr:title']"
-                               ng-init="doc['jcr:title'] = '${currentNode.displayableName}'" value="${currentNode.displayableName}"/>
+                               ng-init="doc['jcr:title'] = '${currentNode.displayableName}'"/>
                     </label>
                 </div>
             </div>
+
+			<div class="row-fluid">
+				<div class="span12">
+					<label>
+						<span>Root path:</span>
+						<input type="text" name="rootPath" ng-model="doc.rootPath" id="rootPath_${currentNode.identifier}"
+							   ng-init="doc.rootPath = '${currentNode.properties['rootPath'].string}'"/>
+						<a href="#" ng-click="openSelectRootPath()">select</a>
+
+						<script type="text/ng-template" id="treeItem.html">
+							<span ng-click="selectRootPath(item)"><i ng-class="getIcon(item)"></i> {{item.title}}</span>
+							<ul>
+								<li ng-if="!isFile(item)" ng-repeat="item in item.childs" ng-include="'treeItem.html'">
+								</li>
+							</ul>
+						</script>
+
+						<div ng-show="showSelectRootPath" class="tree well">
+							<ul>
+								<li ng-include="'treeItem.html'">
+
+								</li>
+							</ul>
+						</div>
+					</label>
+				</div>
+			</div>
 
             <div class="row-fluid">
                 <div class="span12">

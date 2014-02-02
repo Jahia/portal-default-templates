@@ -83,7 +83,7 @@
 - widgetId (string) indexed=no
 
 [jnt:documentBrowserWidget] > jnt:content, jmix:portalWidget
-- rootFolderPath (string) indexed=no
+- rootPath (string) = "/sites" indexed=no autocreated
 
 //---------------------------------------------------------
 // Site components
