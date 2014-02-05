@@ -17,8 +17,8 @@
 <template:addResources type="javascript" resources="jquery.min.js" />
 <template:addResources type="javascript" resources="angular.min.js" />
 <template:addResources type="javascript" resources="app/documentBrowserWidget.js" />
-<template:addResources type="css" resources="commonsWidget.css"/>
-<template:addResources type="css" resources="app/docBrowserWidget.css"/>
+<template:addResources type="css" resources="portal/commonsWidget.css"/>
+<template:addResources type="css" resources="portal/app/docBrowserWidget.css"/>
 
 <div class="docBrowserWidget widget-edit" id="document-browser-${currentNode.identifier}" ng-controller="document-browser-edit-ctrl"
      ng-init="init('document-browser-${currentNode.identifier}'

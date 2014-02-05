@@ -26,7 +26,7 @@
 <c:set var="portalIsEditable" value="${jcr:hasPermission(renderContext.mainResource.node, 'jcr:write_live')}"/>
 
 <template:addResources type="javascript" resources="app/portalToolbar.js" />
-<template:addResources type="css" resources="portal-toolbar.css"/>
+<template:addResources type="css" resources="portal/portal-toolbar.css"/>
 
 <div id="portal_toolbar" class="portal_toolbar">
     <div ng-controller="navCtrl" ng-init="init()">

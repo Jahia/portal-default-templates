@@ -17,46 +17,46 @@
 <html lang="${renderContext.mainResourceLocale.language}">
 
 <head>
-    <meta charset="utf-8">
+	<meta charset="utf-8">
 
-    <title>${fn:escapeXml(renderContext.mainResource.node.displayableName)}</title>
+	<title>${fn:escapeXml(renderContext.mainResource.node.displayableName)}</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <%-- Modernizr --%>
-    <template:addResources type="javascript" resources="modernizr.js"/>
+	<%-- Modernizr --%>
+	<template:addResources type="javascript" resources="modernizr.js"/>
 
-    <%-- google-code-prettify --%>
-    <template:addResources type="css" resources="prettify.css"/>
-    <template:addResources type="javascript" resources="prettify.js,lang-css.js,"/>
+	<%-- google-code-prettify --%>
+	<template:addResources type="css" resources="prettify.css"/>
+	<template:addResources type="javascript" resources="prettify.js,lang-css.js,"/>
 
-    <%-- HTML5 shim, for IE6-8 support of HTML5 elements --%>
-    <template:addResources type="javascript" resources="html5shiv.js" condition="if lt IE 9"/>
+	<%-- HTML5 shim, for IE6-8 support of HTML5 elements --%>
+	<template:addResources type="javascript" resources="html5shiv.js" condition="if lt IE 9"/>
 
-    <%-- font-awesome icons --%>
-    <template:addResources type="css" resources="font-awesome.css"/>
+	<%-- font-awesome icons --%>
+	<template:addResources type="css" resources="font-awesome.css"/>
 
-    <%-- Fav and touch icons --%>
-    <link rel="shortcut icon" href="<c:url value='${url.currentModule}/icon/favicon.ico'/>" type="image/x-icon">
-    <link rel="icon" href="<c:url value='${url.currentModule}/icon/favicon.ico'/>" type="image/ico">
-    <link rel="icon" type="image/png" href="<c:url value='${url.currentModule}/icon/favicon.png'/>"/>
+	<%-- Fav and touch icons --%>
+	<link rel="shortcut icon" href="<c:url value='${url.currentModule}/icon/favicon.ico'/>" type="image/x-icon">
+	<link rel="icon" href="<c:url value='${url.currentModule}/icon/favicon.ico'/>" type="image/ico">
+	<link rel="icon" type="image/png" href="<c:url value='${url.currentModule}/icon/favicon.png'/>"/>
 
-    <link rel="apple-touch-icon" href="<c:url value='${url.currentModule}/icon/icon-iphone.png'/>"/>
-    <link rel="apple-touch-icon" sizes="72x72" href="<c:url value='${url.currentModule}/icon/icon-ipad.png'/>"/>
-    <link rel="apple-touch-icon" sizes="114x114"
-          href="<c:url value='${url.currentModule}/icon/jahia-icon-iphone4.png'/>"/>
+	<link rel="apple-touch-icon" href="<c:url value='${url.currentModule}/icon/icon-iphone.png'/>"/>
+	<link rel="apple-touch-icon" sizes="72x72" href="<c:url value='${url.currentModule}/icon/icon-ipad.png'/>"/>
+	<link rel="apple-touch-icon" sizes="114x114"
+		  href="<c:url value='${url.currentModule}/icon/jahia-icon-iphone4.png'/>"/>
 
 
-    <%--tablet and iphone meta--%>
-    <meta name='HandheldFriendly' content='True'/>
-    <meta name="viewport"
-          content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<%--tablet and iphone meta--%>
+	<meta name='HandheldFriendly' content='True'/>
+	<meta name="viewport"
+		  content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-    <%-- Google fonts--%>
-    <c:set var="s" value="${renderContext.request.scheme=='https'?'s':''}"/>
-    <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+	<%-- Google fonts--%>
+	<c:set var="s" value="${renderContext.request.scheme=='https'?'s':''}"/>
+	<link href='http${s}://fonts.googleapis.com/css?family=Scada' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
@@ -65,26 +65,25 @@
 
 <template:addResources type="javascript" resources="jquery.min.js,jquery-ui.min.js" />
 <template:addResources type="javascript" resources="angular.min.js" />
-
 <bootstrap:addThemeJS/>
 <template:addResources type="javascript" resources="bootstrap-modal.js"/>
 <template:addResources type="javascript" resources="bootstrap-tooltip.js" />
 
 <bootstrap:addCSS/>
-<template:addResources type="css" resources="portal-demo.css" />
+<template:addResources type="css" resources="portal/portal-demo.css" />
 
 <template:area path="header"/>
 
 <div class="wrapper">
-    <template:area path="pagecontent"/>
-    <div class="copyright">
-        <template:area path="footer"/>
-    </div>
+	<template:area path="pagecontent"/>
+	<div class="copyright">
+		<template:area path="footer"/>
+	</div>
 </div>
 
 
 <c:if test="${renderContext.editMode}">
-    <template:addResources type="css" resources="edit.css" />
+	<template:addResources type="css" resources="edit.css" />
 </c:if>
 
 </body>

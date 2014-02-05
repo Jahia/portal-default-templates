@@ -24,7 +24,7 @@
 <c:set var="portalNode" value="${jcr:getParentOfType(currentNode, portalMix)}"/>
 <c:set var="currentWidgetSkin" value="${currentNode.properties[widgetSkinProp].string}"/>
 
-<template:addResources type="css" resources="commonsWidget.css"/>
+<template:addResources type="css" resources="portal/commonsWidget.css"/>
 
 <div class="widget-edit">
     <h2>

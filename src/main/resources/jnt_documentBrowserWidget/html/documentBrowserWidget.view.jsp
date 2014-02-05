@@ -16,7 +16,7 @@
 <template:addResources type="javascript" resources="jquery.min.js"/>
 <template:addResources type="javascript" resources="angular.min.js"/>
 <template:addResources type="javascript" resources="app/documentBrowserWidget.js"/>
-<template:addResources type="css" resources="app/docBrowserWidget.css"/>
+<template:addResources type="css" resources="portal/app/docBrowserWidget.css"/>
 
 <div class="docBrowserWidget" id="document-browser-${currentNode.identifier}"
 	 ng-controller="document-browser-ctrl"

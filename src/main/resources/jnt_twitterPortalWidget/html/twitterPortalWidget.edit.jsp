@@ -17,9 +17,9 @@
 <template:addResources type="javascript" resources="angular.min.js"/>
 <template:addResources type="javascript" resources="angular-bootstrap-colorpicker.js"/>
 <template:addResources type="javascript" resources="app/twitterWidget.js"/>
-<template:addResources type="css" resources="twitterWidget.css"/>
-<template:addResources type="css" resources="commonsWidget.css"/>
-<template:addResources type="css" resources="colorpicker.css"/>
+<template:addResources type="css" resources="portal/app/twitterWidget.css"/>
+<template:addResources type="css" resources="portal/commonsWidget.css"/>
+<template:addResources type="css" resources="portal/colorpicker.css"/>
 
 <c:set var="properties" value="${currentNode.properties}"/>
 

@@ -16,7 +16,7 @@
 <template:addResources type="javascript" resources="jquery.min.js"/>
 <template:addResources type="javascript" resources="angular.min.js"/>
 <template:addResources type="javascript" resources="app/googleFeedWidget.js"/>
-<template:addResources type="css" resources="commonsWidget.css"/>
+<template:addResources type="css" resources="portal/commonsWidget.css"/>
 
 <div id="google-feed-${currentNode.identifier}" ng-controller="google-feed-edit-ctrl"
      ng-init="init('google-feed-${currentNode.identifier}')" class="widget-edit">

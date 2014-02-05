@@ -8,7 +8,7 @@
 <c:set var="widgetFullView" value="${portal:getSpecificView(currentNode.primaryNodeTypeName, 'full', portalNode)}"/>
 
 <template:addResources type="javascript" resources="app/portalWidgetWrapper.js"/>
-<template:addResources type="css" resources="box.advanced.css"/>
+<template:addResources type="css" resources="portal/box.advanced.css"/>
 
 <script type="text/javascript">
     // skin javascript controller

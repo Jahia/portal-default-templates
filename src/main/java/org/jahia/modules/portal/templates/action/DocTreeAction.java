@@ -1,14 +1,12 @@
-package com.jahia.modules.action;
+package org.jahia.modules.portal.templates.action;
 
 import java.util.List;
 import java.util.Map;
 import javax.jcr.RepositoryException;
-import javax.jcr.query.QueryManager;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.jahia.bin.Action;
 import org.jahia.bin.ActionResult;
-import org.jahia.bin.Render;
 import org.jahia.services.content.JCRContentUtils;
 import org.jahia.services.content.JCRNodeWrapper;
 import org.jahia.services.content.JCRSessionWrapper;
