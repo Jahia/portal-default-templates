@@ -1,4 +1,3 @@
-<%@ page import="org.jahia.modules.portal.PortalConstants" %>
 <%@ page language="java" contentType="text/html;charset=UTF-8" %>
 <%@ taglib prefix="template" uri="http://www.jahia.org/tags/templateLib" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -17,7 +16,6 @@
 <%--@elvariable id="renderContext" type="org.jahia.services.render.RenderContext"--%>
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
-<c:set var="portalMixin" value="<%= PortalConstants.JMIX_PORTAL %>"/>
 <template:addResources type="css" resources="portal/portal-demo.css"/>
 
 <jcr:node path="${renderContext.user.localPath}" var="user" />
@@ -28,7 +26,6 @@
     <h3><fmt:message key="userPortals.myPortals"/>:</h3>
     <ul class="nav nav-list userPortals">
         <c:forEach items="${portal:userPortalsBySite(renderContext.site.siteKey)}" var="portalNode">
-            <c:set var="portalParent" value="${jcr:getParentOfType(renderContext.mainResource.node, portalMixin)}"/>
             <li>
                 <a href="<c:url value="${url.base}${portalNode.path}"/>">${portalNode.displayableName}</a>
             </li>
