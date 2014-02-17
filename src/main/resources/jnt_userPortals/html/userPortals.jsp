@@ -5,6 +5,8 @@
 <%@ taglib prefix="jcr" uri="http://www.jahia.org/tags/jcr" %>
 <%@ taglib prefix="bootstrap" uri="http://www.jahia.org/tags/bootstrapLib" %>
 <%@ taglib prefix="portal" uri="http://www.jahia.org/tags/portalLib" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="user" uri="http://www.jahia.org/tags/user" %>
 <%--@elvariable id="currentNode" type="org.jahia.services.content.JCRNodeWrapper"--%>
 <%--@elvariable id="portalNode" type="org.jahia.services.content.JCRNodeWrapper"--%>
 <%--@elvariable id="out" type="java.io.PrintWriter"--%>
@@ -14,11 +16,15 @@
 <%--@elvariable id="renderContext" type="org.jahia.services.render.RenderContext"--%>
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
+<jcr:node path="${renderContext.user.localPath}" var="user" />
+<template:addCacheDependency path="${user.path}/portals/${renderContext.site.name}"/>
+<template:addCacheDependency path="${renderContext.site.path}/portals"/>
 
-<ul>
-<c:forEach items="${portal:userPortalsBySite(renderContext.site.siteKey)}" var="portalNode">
-    <li>
-        <a href="<c:url value="${url.base}${portalNode.path}"/>">${portalNode.displayableName}</a><br>
-    </li>
-</c:forEach>
+<ul class="nav nav-list">
+    <li class="nav-header"><fmt:message key="userPortals.myPortals"/></li>
+    <c:forEach items="${portal:userPortalsBySite(renderContext.site.siteKey)}" var="portalNode">
+        <li>
+            <a href="<c:url value="${url.base}${portalNode.path}"/>">${portalNode.displayableName}</a><br>
+        </li>
+    </c:forEach>
 </ul>
