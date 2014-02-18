@@ -150,6 +150,11 @@
                                                        rowType="predefined">
                                     <bootstrap-layer-container-rows-a-side1 jcr:primaryType="jnt:contentList">
                                         <userportals jcr:primaryType="jnt:userPortals"/>
+                                        <portal-widgets-zap jcr:primaryType="jnt:portalWidgetsZap">
+                                            <j:translation_en jcr:language="en"
+                                                jcr:primaryType="jnt:translation"
+                                                jcr:title="portal widgets zap"/>
+                                        </portal-widgets-zap>
                                     </bootstrap-layer-container-rows-a-side1>
                                     <bootstrap-layer-container-rows-a jcr:primaryType="jnt:contentList">
                                         <portal-toolbar jcr:primaryType="jnt:portalToolbar">

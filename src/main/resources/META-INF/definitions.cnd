@@ -28,6 +28,8 @@
 
 [jnt:portalToolbar] > jmix:portalComponentContent, jmix:studioOnly, jnt:content, mix:title
 
+[jnt:portalWidgetsZap] > jmix:portalComponentContent, jmix:studioOnly, jnt:content, mix:title
+
 //---------------------------------------------------------
 // Widgets
 //---------------------------------------------------------
