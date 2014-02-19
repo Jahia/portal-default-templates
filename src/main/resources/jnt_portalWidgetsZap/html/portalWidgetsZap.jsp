@@ -28,13 +28,16 @@
 <template:addResources type="javascript" resources="app/portalWidgetsZap.js" />
 
 <div id="portalWidgetsZap" ng-controller="widgetsCtrl" ng-init="init()">
-    <input class="span5 right" ng-model="query" type="text" placeholder="Search...">
+    <button type="button" ng-init="showList = false" ng-click="showList = !showList">Add widget</button>
+    <div ng-show="showList">
+        <input class="span5 right" ng-model="query" type="text" placeholder="Search...">
 
-    <ul>
-        <li ng-repeat="widget in widgets | filter: search" class="widget_nodetype" portal-widget>
-            <span>{{widget.displayableName}}</span>
-        </li>
-    </ul>
+        <ul>
+            <li ng-repeat="widget in widgets | filter: search" class="widget_nodetype" portal-widget>
+                <span>{{widget.displayableName}}</span>
+            </li>
+        </ul>
+    </div>
 </div>
 
 <script type="text/javascript">
