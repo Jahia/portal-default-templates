@@ -3,12 +3,19 @@ var portalWidgetsZap = angular.module('portalWidgetsZapApp', []);
 portalWidgetsZap.directive('portalWidget', function($timeout) {
     return {
         link: function(scope, element, attrs) {
+            var widget = scope.widget;
+            if(widget){
+                element.attr("data-widget_nodetype", widget.name);
+                widget.views.forEach(function(view){
+                    if(view.key == "edit"){
+                        element.attr("data-widget_view", "edit");
+                    }
+                });
+            }
+
             element.draggable({
                 connectToSortable: ".portal_area",
                 helper: "clone",
-                stop: function(event, ui){
-
-                },
                 revert: "invalid"
             });
         }
