@@ -5,16 +5,17 @@ portalWidgetsZap.directive('portalWidget', function($timeout) {
         link: function(scope, element, attrs) {
             var widget = scope.widget;
             if(widget){
-                element.attr("data-widget_nodetype", widget.name);
+                element.addClass(Jahia.Portal.constants.EXTERNAL_WIDGET_DROP_CLASS);
+                element.attr("data-" + Jahia.Portal.constants.EXTERNAL_WIDGET_DROP_NODEYPE, widget.name);
                 widget.views.forEach(function(view){
                     if(view.key == "edit"){
-                        element.attr("data-widget_view", "edit");
+                        element.attr("data-" + Jahia.Portal.constants.EXTERNAL_WIDGET_DROP_VIEW, "edit");
                     }
                 });
             }
 
             element.draggable({
-                connectToSortable: ".portal_area",
+                connectToSortable: Jahia.Portal.default.sortable_options.connectWith,
                 helper: "clone",
                 revert: "invalid"
             });

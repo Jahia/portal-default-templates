@@ -33,7 +33,7 @@
         <input class="span5 right" ng-model="query" type="text" placeholder="Search...">
 
         <ul>
-            <li ng-repeat="widget in widgets | filter: search" class="widget_nodetype" portal-widget>
+            <li ng-repeat="widget in widgets | filter: search" portal-widget>
                 <span>{{widget.displayableName}}</span>
             </li>
         </ul>
