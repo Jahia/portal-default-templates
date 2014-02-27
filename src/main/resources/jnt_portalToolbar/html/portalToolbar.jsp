@@ -20,11 +20,14 @@
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 <%--@elvariable id="nodetype" type="org.jahia.services.content.nodetypes.ExtendedNodeType"--%>
+<%--@elvariable id="portalNode" type="org.jahia.services.content.JCRNodeWrapper"--%>
 <c:set var="portalMixin" value="<%= PortalConstants.JMIX_PORTAL %>"/>
 <c:set var="portalModelNT" value="<%= PortalConstants.JNT_PORTAL_MODEL %>"/>
 <c:set var="portalNode" value="${jcr:getParentOfType(renderContext.mainResource.node, portalMixin)}" />
 <c:set var="portalIsEditable" value="${jcr:hasPermission(renderContext.mainResource.node, 'jcr:write_live')}"/>
+<c:set var="portalIsLocked" value="${not empty portalNode.properties['j:locked'] && portalNode.properties['j:locked'].boolean}"/>
 
+<template:addCacheDependency node="${portalNode}"/>
 <template:addResources type="javascript" resources="app/portalToolbar.js" />
 <template:addResources type="css" resources="portal/portal-toolbar.css"/>
 
@@ -41,7 +44,7 @@
                             title="<fmt:message key="jnt_portalToolbar.customize.tooltip"/>"><fmt:message key="jnt_portalToolbar.customize"/></button>
                 </li>
             </c:if>
-            <c:if test="${portalIsEditable}">
+            <c:if test="${portalIsEditable && !portalIsLocked}">
                 <li><a href="#newTabModal" data-toggle="modal"  class="toolbar-tooltip" data-placement="bottom" title="<fmt:message key="jnt_portalToolbar.addTab.tooltip"/>">
                     <i class="icon-folder-open"></i></a>
                 </li>
@@ -56,10 +59,19 @@
                                      class="toolbar-tooltip" data-placement="bottom" title="<fmt:message key="jnt_portalToolbar.addWidget.tooltip"/>"><i class="icon-plus"></i></a>
                 </li>
             </c:if>
+            <c:if test="${portalIsEditable}">
+                <li class="right">
+                    <a href="#" ng-click="${portalIsLocked ? 'unlock()' : 'lock()'}"
+                       class="toolbar-tooltip" data-placement="bottom"
+                       title="<fmt:message key="jnt_portalToolbar.${portalIsLocked ? 'unlock' : 'lock'}.tooltip"/>">
+                        <i class="icon-lock"></i>
+                    </a>
+                </li>
+            </c:if>
         </ul>
     </div>
 
-    <c:if test="${portalIsEditable}">
+    <c:if test="${portalIsEditable && !portalIsLocked}">
         <script type="text/ng-template" id="tabFormTemplate">
             <form>
                 <div class="row-fluid">

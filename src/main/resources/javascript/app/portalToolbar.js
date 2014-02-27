@@ -103,5 +103,13 @@ portalToolbar.controller('navCtrl', function test($scope) {
 
     $scope.copyModel = function(){
         portal.initPortalFromModel();
+    };
+
+    $scope.lock = function(){
+        portal.lockPortal();
+    };
+
+    $scope.unlock = function(){
+        portal.unlockPortal();
     }
 });
