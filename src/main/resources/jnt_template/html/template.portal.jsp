@@ -63,11 +63,7 @@
 <%-- Les styles old--%>
 <template:addResources type="css" resources="jahia-old-responsive.css,jahia-old.css"/>
 
-<template:addResources type="javascript" resources="jquery.min.js,jquery-ui.min.js" />
-<template:addResources type="javascript" resources="angular.min.js" />
-<bootstrap:addThemeJS/>
-<template:addResources type="javascript" resources="bootstrap-modal.js"/>
-<template:addResources type="javascript" resources="bootstrap-tooltip.js" />
+<template:addResources type="javascript" resources="jquery.min.js" />
 
 <bootstrap:addCSS/>
 <template:addResources type="css" resources="portal/portal-demo.css" />
