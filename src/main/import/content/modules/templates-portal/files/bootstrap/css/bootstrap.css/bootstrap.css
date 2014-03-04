@@ -6195,6 +6195,13 @@ a.badge:focus {
 .affix {
   position: fixed;
 }
+/* = Fix slidebar background
+ -------------------------------------------------------------- */
+#sb-site {
+  background-color: #ffffff;
+  background-image: url("../img/body-bg.png");
+  background-repeat: repeat;
+}
 .clearfix {
   *zoom: 1;
 }
@@ -6257,6 +6264,9 @@ a.badge:focus {
 }
 /* = Wrapper
 -------------------------------------------------------------- */
+.wrapper_container {
+  padding: 84px 0 0 0;
+}
 .wrapper {
   background-attachment: scroll !important;
   background-color: #fff;
@@ -6269,7 +6279,6 @@ a.badge:focus {
   width: 1200px;
   padding: 20px 0 0 0 ;
   min-width: 320px;
-  margin-top: 84px;
 }
 /* = Navbar
 -------------------------------------------------------------- */
@@ -6347,8 +6356,8 @@ ul.sitemap li li li {
 /* =Responsive: Less 979px
 -------------------------------------------------------------- */
 @media (max-width: 979px) {
-  .wrapper {
-    margin-top: 0;
+  .wrapper_container {
+    padding: 0;
   }
   .navbar .brand {
     display: block;

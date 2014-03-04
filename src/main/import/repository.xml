@@ -47,6 +47,7 @@
                                     jcr:title="portal"/>
                             <header jcr:primaryType="jnt:contentList">
                                 <home inverse="true"
+                           j:styleName="sb-slide"
                            jcr:primaryType="jnt:bootstrapNavBar"
                            option="navbar-fixed-top"
                            responsive="true">
@@ -57,7 +58,10 @@
                                                    j:menuItemView="menuElement"
                                                    j:startLevel="0"
                                                    jcr:primaryType="jnt:bootstrapNavMenu"/>
-                                    <bootstrapmenuloginform jcr:primaryType="jnt:bootstrapMenuLoginForm" position="right"/>
+                                    <bootstrapmenuloginform j:view="menu"
+                                                jcr:mixinTypes="jmix:renderable"
+                                                jcr:primaryType="jnt:bootstrapMenuLoginForm"
+                                                position="right"/>
                                     <bootstrapmenulanguageswitcher jcr:primaryType="jnt:bootstrapMenuLanguageSwitcher"
                                                        position="right"
                                                        typeOfDisplay="isoLocaleCountryCode"/>
@@ -83,6 +87,7 @@
                                             <portalarea jcr:primaryType="jnt:portalArea"/>
                                     </bootstrap-layer-container-rows-a>
                                     </bootstrap-layer-container-rows-a>
+                                    <slidebarbutton jcr:primaryType="jnt:slidebarButton" panel="right"/>
                                 </portal_x0020_content>
                                 <sb-left jcr:primaryType="jnt:contentList">
                                     <users-portals-list jcr:primaryType="jnt:userPortals"/>
@@ -200,14 +205,29 @@
                                 </portal_x0020_content>
                             </_x0033_-columns>
                             <pagecontent jcr:primaryType="jnt:contentList">
+                                <bootstrap-layer-container-rows-a jcr:mixinTypes="jmix:bootstrapFullComponentRowPredefined"
+                                                       jcr:primaryType="jnt:bootstrapFullComponent"
+                                                       layout="12"
+                                                       rowType="predefined">
+                                    <bootstrap-layer-container-rows-a jcr:primaryType="jnt:contentList">
                                 <portal-toolbar jcr:primaryType="jnt:portalToolbar">
                                     <j:translation_en jcr:language="en"
                                           jcr:mixinTypes="mix:title"
                                           jcr:primaryType="jnt:translation"
                                           jcr:title="portal toolbar"/>
                                 </portal-toolbar>
+                                </bootstrap-layer-container-rows-a>
+                                </bootstrap-layer-container-rows-a>
                                 <portal_x0020_content j:allowedTypes="" jcr:primaryType="jnt:area"/>
                             </pagecontent>
+                            <sb-left jcr:primaryType="jnt:contentList">
+                                <portal-widgets-zap jcr:primaryType="jnt:portalWidgetsZap">
+                                    <j:translation_en jcr:language="en"
+                                          jcr:mixinTypes="mix:title"
+                                          jcr:primaryType="jnt:translation"
+                                          jcr:title="portal widgets zap"/>
+                                </portal-widgets-zap>
+                            </sb-left>
                         </portal>
                         <site j:hiddenTemplate="false" jcr:primaryType="jnt:template">
                             <j:translation_en jcr:language="en"

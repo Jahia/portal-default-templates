@@ -64,33 +64,15 @@
 <template:addResources type="css" resources="jahia-old-responsive.css,jahia-old.css"/>
 
 <template:addResources type="javascript" resources="jquery.min.js" />
-<template:addResources type="javascript" resources="slidebars.min.js" />
-<template:addResources type="css" resources="slidebars.min.css" />
-
 <bootstrap:addCSS/>
-<template:addResources type="css" resources="portal/portal-demo.css" />
-
 
 <template:area path="header"/>
-
-<div id="portal_demo_site">
-    <div class="wrapper_container">
         <div class="wrapper">
             <template:area path="pagecontent"/>
             <div class="copyright">
                 <template:area path="footer"/>
             </div>
         </div>
-    </div>
-</div>
-
-<div class="sb-slidebar sb-left sb-width-custom">
-    <template:area path="sb-left"/>
-</div>
-
-<div class="sb-slidebar sb-right sb-width-custom">
-    <template:area path="sb-right"/>
-</div>
 
 <c:if test="${renderContext.editMode}">
 	<template:addResources type="css" resources="edit.css" />
