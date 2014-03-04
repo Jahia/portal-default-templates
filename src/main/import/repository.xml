@@ -87,7 +87,6 @@
                                             <portalarea jcr:primaryType="jnt:portalArea"/>
                                     </bootstrap-layer-container-rows-a>
                                     </bootstrap-layer-container-rows-a>
-                                    <slidebarbutton jcr:primaryType="jnt:slidebarButton" panel="right"/>
                                 </portal_x0020_content>
                                 <sb-left jcr:primaryType="jnt:contentList">
                                     <users-portals-list jcr:primaryType="jnt:userPortals"/>
@@ -219,6 +218,11 @@
                                 </bootstrap-layer-container-rows-a>
                                 </bootstrap-layer-container-rows-a>
                                 <portal_x0020_content j:allowedTypes="" jcr:primaryType="jnt:area"/>
+                                <portal-widget-zap jcr:primaryType="jnt:portalWidgetsZap">
+                                    <j:translation_en jcr:language="en"
+                                          jcr:primaryType="jnt:translation"
+                                          jcr:title="portal widget zap"/>
+                                </portal-widget-zap>
                             </pagecontent>
                             <sb-left jcr:primaryType="jnt:contentList">
                                 <portal-widgets-zap jcr:primaryType="jnt:portalWidgetsZap">
