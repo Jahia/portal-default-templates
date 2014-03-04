@@ -37,7 +37,9 @@
                                                     j:titleKey="siteSettings.label.bootstrap"
                                                     jcr:mixinTypes="jmix:rbTitle"
                                                     jcr:primaryType="jnt:contentTemplate">
-                                <pagecontent jcr:primaryType="jnt:contentList"/>
+                                <pagecontent jcr:primaryType="jnt:contentList">
+                                    <editLessVariables formview="empty" jcr:primaryType="jnt:editLessVariables"/>
+                                </pagecontent>
                             </bootstrapCustomization>
                         </site-settings-base>
                         <portal j:hiddenTemplate="false" jcr:primaryType="jnt:template">
