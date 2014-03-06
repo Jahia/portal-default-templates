@@ -8,7 +8,60 @@
 						  j:title="Portal Templates"
                         jcr:mixinTypes="jmix:hasExternalProviderExtension"
 						  jcr:primaryType="jnt:module">
-                
+                <portlets jcr:primaryType="jnt:portletFolder"/>
+                <files jcr:primaryType="jnt:folder">
+                    <bootstrap jcr:primaryType="jnt:folder">
+                        <css jcr:primaryType="jnt:folder">
+                            <bootstrap.css jcr:primaryType="jnt:file">
+                                <jcr:content jcr:mimeType="text/css" jcr:primaryType="jnt:resource"/>
+                            </bootstrap.css>
+                        </css>
+                        <img jcr:primaryType="jnt:folder">
+                            <glyphicons-halflings.png j:height="159"
+                                            j:width="469"
+                                            jcr:mixinTypes="jmix:image"
+                                            jcr:primaryType="jnt:file">
+                                <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
+                                <thumbnail jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
+                                <thumbnail2 jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
+                            </glyphicons-halflings.png>
+                            <body-bg.png j:height="400"
+                               j:width="400"
+                               jcr:mixinTypes="jmix:image"
+                               jcr:primaryType="jnt:file">
+                                <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
+                                <thumbnail jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
+                                <thumbnail2 jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
+                            </body-bg.png>
+                            <glyphicons-halflings-white.png j:height="159"
+                                                  j:width="469"
+                                                  jcr:mixinTypes="jmix:image"
+                                                  jcr:primaryType="jnt:file">
+                                <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
+                                <thumbnail jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
+                                <thumbnail2 jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
+                            </glyphicons-halflings-white.png>
+                            <logo.png j:height="100"
+                            j:width="200"
+                            jcr:mixinTypes="jmix:image"
+                            jcr:primaryType="jnt:file">
+                                <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
+                                <thumbnail jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
+                                <thumbnail2 jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
+                            </logo.png>
+                            <logo-small.png j:height="50"
+                                  j:width="168"
+                                  jcr:mixinTypes="jmix:image"
+                                  jcr:primaryType="jnt:file">
+                                <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
+                                <thumbnail jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
+                                <thumbnail2 jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
+                            </logo-small.png>
+                        </img>
+                    </bootstrap>
+                    <less jcr:primaryType="jnt:folder"/>
+                </files>
+                <contents jcr:primaryType="jnt:contentFolder"/>
                 <templates jcr:primaryType="jnt:templatesFolder">
                     <files jcr:primaryType="jnt:folder"/>
                     <contents jcr:primaryType="jnt:contentFolder"/>
@@ -87,7 +140,7 @@
                                                           layout="12"
                                                           rowType="predefined">
                                         <bootstrap-layer-container-rows-a jcr:primaryType="jnt:contentList">
-                                            <portalarea jcr:primaryType="jnt:portalArea"/>
+                                            <col1 jcr:primaryType="jnt:portalArea"/>
                                     </bootstrap-layer-container-rows-a>
                                     </bootstrap-layer-container-rows-a>
                                 </portal_x0020_content>
@@ -122,10 +175,10 @@
                                                           layout="4_8"
                                                           rowType="predefined">
                                         <bootstrap-layer-container-rows-a-side1 jcr:primaryType="jnt:contentList">
-                                            <portalarea jcr:primaryType="jnt:portalArea"/>
+                                            <col1 jcr:primaryType="jnt:portalArea"/>
                                         </bootstrap-layer-container-rows-a-side1>
                                         <bootstrap-layer-container-rows-a jcr:primaryType="jnt:contentList">
-                                            <portalarea jcr:primaryType="jnt:portalArea"/>
+                                            <col2 jcr:primaryType="jnt:portalArea"/>
                                     </bootstrap-layer-container-rows-a>
                                     </bootstrap-layer-container-rows-a>
                                 </portal_x0020_content>
@@ -157,10 +210,10 @@
                                                           layout="8_4"
                                                           rowType="predefined">
                                         <bootstrap-layer-container-rows-a jcr:primaryType="jnt:contentList">
-                                            <portalarea jcr:primaryType="jnt:portalArea"/>
+                                            <col1 jcr:primaryType="jnt:portalArea"/>
                                     </bootstrap-layer-container-rows-a>
                                         <bootstrap-layer-container-rows-a-side1 jcr:primaryType="jnt:contentList">
-                                            <portalarea jcr:primaryType="jnt:portalArea"/>
+                                            <col2 jcr:primaryType="jnt:portalArea"/>
                                         </bootstrap-layer-container-rows-a-side1>
                                     </bootstrap-layer-container-rows-a>
                                 </portal_x0020_content>
@@ -195,13 +248,13 @@
                                                           layout="4_4_4"
                                                           rowType="predefined">
                                         <bootstrap-layer-container-rows-a jcr:primaryType="jnt:contentList">
-                                            <portalarea jcr:primaryType="jnt:portalArea"/>
+                                            <col1 jcr:primaryType="jnt:portalArea"/>
                                         </bootstrap-layer-container-rows-a>
                                         <bootstrap-layer-container-rows-a-side1 jcr:primaryType="jnt:contentList">
-                                            <portalarea jcr:primaryType="jnt:portalArea"/>
+                                            <col2 jcr:primaryType="jnt:portalArea"/>
                                         </bootstrap-layer-container-rows-a-side1>
                                         <bootstrap-layer-container-rows-a-side2 jcr:primaryType="jnt:contentList">
-                                            <portalarea jcr:primaryType="jnt:portalArea"/>
+                                            <col3 jcr:primaryType="jnt:portalArea"/>
                                         </bootstrap-layer-container-rows-a-side2>
                                     </bootstrap-layer-container-rows-a>
                                 </portal_x0020_content>
@@ -347,60 +400,7 @@
                     </base>
                 </templates>
                 
-                <files jcr:primaryType="jnt:folder">
-                    <bootstrap jcr:primaryType="jnt:folder">
-                        <css jcr:primaryType="jnt:folder">
-                            <bootstrap.css jcr:primaryType="jnt:file">
-                                <jcr:content jcr:mimeType="text/css" jcr:primaryType="jnt:resource"/>
-                            </bootstrap.css>
-                        </css>
-                        <img jcr:primaryType="jnt:folder">
-                            <glyphicons-halflings.png j:height="159"
-                                            j:width="469"
-                                            jcr:mixinTypes="jmix:image"
-                                            jcr:primaryType="jnt:file">
-                                <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                                <thumbnail jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                                <thumbnail2 jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                            </glyphicons-halflings.png>
-                            <body-bg.png j:height="400"
-                               j:width="400"
-                               jcr:mixinTypes="jmix:image"
-                               jcr:primaryType="jnt:file">
-                                <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                                <thumbnail jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                                <thumbnail2 jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                            </body-bg.png>
-                            <glyphicons-halflings-white.png j:height="159"
-                                                  j:width="469"
-                                                  jcr:mixinTypes="jmix:image"
-                                                  jcr:primaryType="jnt:file">
-                                <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                                <thumbnail jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                                <thumbnail2 jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                            </glyphicons-halflings-white.png>
-                            <logo.png j:height="100"
-                            j:width="200"
-                            jcr:mixinTypes="jmix:image"
-                            jcr:primaryType="jnt:file">
-                                <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                                <thumbnail jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                                <thumbnail2 jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                            </logo.png>
-                            <logo-small.png j:height="50"
-                                  j:width="168"
-                                  jcr:mixinTypes="jmix:image"
-                                  jcr:primaryType="jnt:file">
-                                <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                                <thumbnail jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                                <thumbnail2 jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                            </logo-small.png>
-                        </img>
-                    </bootstrap>
-                    <less jcr:primaryType="jnt:folder"/>
-                </files>
-                <portlets jcr:primaryType="jnt:portletFolder"/>
-                <contents jcr:primaryType="jnt:contentFolder"/>
+                
 			<home j:isHomePage="true"
 				  j:templateName="3col"
 				  jcr:primaryType="jnt:page">
