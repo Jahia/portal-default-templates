@@ -16,6 +16,16 @@
     <connection>scm:dummy:uri</connection>
     <developerConnection>scm:dummy:uri</developerConnection>
   </scm>
+  <distributionManagement>
+    <repository>
+      <id>jahia-enterprise-releases</id>
+      <url>https://devtools.jahia.com/nexus/content/repositories/jahia-enterprise-releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>jahia-enterprise-snapshots</id>
+      <url>https://devtools.jahia.com/nexus/content/repositories/jahia-enterprise-snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
   <dependencies>
     <dependency>
       <groupId>org.jahia.modules</groupId>
@@ -56,16 +66,6 @@
       <url>https://devtools.jahia.com/nexus/content/groups/public</url>
     </repository>
   </repositories>
-    <distributionManagement>
-        <repository>
-            <id>jahia-enterprise-releases</id>
-            <url>https://devtools.jahia.com/nexus/content/repositories/jahia-enterprise-releases</url>
-        </repository>
-        <snapshotRepository>
-            <id>jahia-enterprise-snapshots</id>
-            <url>https://devtools.jahia.com/nexus/content/repositories/jahia-enterprise-snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
   <build>
     <plugins>
       <plugin>
@@ -75,7 +75,7 @@
         <configuration>
           <instructions>
             <Jahia-Module-Type>templatesSet</Jahia-Module-Type>
-            <Jahia-Depends>bootstrap,bootstrap-components,contact,default,event,facets,search,teasers,portal-factory,portal-dashboard</Jahia-Depends>
+            <Jahia-Depends>default,bootstrap-components,bootstrap,contact,event,facets,bookmarks,search,teasers,portal-dashboard,portal-factory</Jahia-Depends>
           </instructions>
         </configuration>
       </plugin>
