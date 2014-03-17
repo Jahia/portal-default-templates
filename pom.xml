@@ -75,7 +75,7 @@
         <configuration>
           <instructions>
             <Jahia-Module-Type>templatesSet</Jahia-Module-Type>
-            <Jahia-Depends>default,bootstrap-components,bootstrap,contact,event,facets,bookmarks,search,teasers,portal-dashboard,portal-factory</Jahia-Depends>
+            <Jahia-Depends>default,bootstrap-components,bootstrap,contact,event,facets,search,teasers,portal-dashboard,portal-factory</Jahia-Depends>
           </instructions>
         </configuration>
       </plugin>

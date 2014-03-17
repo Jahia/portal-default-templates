@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <content xmlns:j="http://www.jahia.org/jahia/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0">
 	<modules jcr:primaryType="jnt:modules">
-        <templates-portal j:dependencies="bookmarks bootstrap bootstrap-components contact default event facets portal-dashboard portal-factory search teasers"
+        <templates-portal j:dependencies="bootstrap bootstrap-components contact default event facets portal-dashboard portal-factory search teasers"
 						  j:installedModules="templates-portal"
                         j:modulePriority="0"
 						  j:moduleType="templatesSet"
@@ -275,13 +275,7 @@
                                     <pagecontent jcr:mixinTypes="jmix:bootstrapFullComponentRowPredefined"
                                      jcr:primaryType="jnt:bootstrapFullComponent"
                                      layout="3_6_3"
-                                     rowType="predefined">
-                                        <pagecontent-side1 jcr:primaryType="jnt:contentList">
-                                            <my-bookmarks jcr:primaryType="jnt:currentUserBookmarks"
-                                            numberOfBookmarksPerPage="10"/>
-                                        </pagecontent-side1>
-                                        <pagecontent jcr:primaryType="jnt:contentList"/>
-                                </pagecontent>
+                                     rowType="predefined"/>
                                 </pagecontent>
                             </_x0033_col>
                             <content-template j:applyOn="jnt:content"
