@@ -7,11 +7,11 @@
     <artifactId>jahia-modules</artifactId>
     <version>7.0.0.0-SNAPSHOT</version>
   </parent>
-  <artifactId>templates-portal</artifactId>
+  <artifactId>portal-factory_default-templates</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>bundle</packaging>
-  <name>Portal Templates</name>
-  <description>This is the custom module (portal) for running on a Jahia xCM server.</description>
+  <name>Portal factory - default templates</name>
+  <description>This is the custom module (portal factory - default templates) for running on a Jahia xCM server.</description>
   <scm>
     <connection>scm:dummy:uri</connection>
     <developerConnection>scm:dummy:uri</developerConnection>
@@ -35,7 +35,7 @@
     </dependency>
     <dependency>
       <groupId>org.jahia.modules</groupId>
-      <artifactId>portal-factory</artifactId>
+      <artifactId>portal-factory_core</artifactId>
       <version>1.0-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
@@ -75,7 +75,7 @@
         <configuration>
           <instructions>
             <Jahia-Module-Type>templatesSet</Jahia-Module-Type>
-            <Jahia-Depends>default,bootstrap-components,bootstrap,contact,event,facets,search,teasers,portal-dashboard,portal-factory</Jahia-Depends>
+            <Jahia-Depends>default,bootstrap-components,bootstrap,contact,event,facets,search,teasers,portal-factory_user-portal,portal-factory_core</Jahia-Depends>
           </instructions>
         </configuration>
       </plugin>

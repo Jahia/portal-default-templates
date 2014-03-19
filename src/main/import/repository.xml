@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <content xmlns:j="http://www.jahia.org/jahia/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0">
 	<modules jcr:primaryType="jnt:modules">
-        <templates-portal j:dependencies="bootstrap bootstrap-components contact default event facets portal-dashboard portal-factory search teasers"
-						  j:installedModules="templates-portal"
+        <portal-factory_default-templates j:dependencies="bootstrap bootstrap-components contact default event facets portal-factory_user-portal portal-factory_core search teasers"
+						  j:installedModules="portal-factory_default-templates"
                         j:modulePriority="0"
 						  j:moduleType="templatesSet"
-						  j:title="Portal Templates"
+						  j:title="Portal factory - default templates"
                         jcr:mixinTypes="jmix:hasExternalProviderExtension"
 						  jcr:primaryType="jnt:module">
                 
@@ -336,7 +336,7 @@
                                                    jcr:primaryType="jnt:bootstrapNavMenu"/>
                                     <bootstrapmenusimplesearchform jcr:primaryType="jnt:bootstrapMenuSimpleSearchForm"
                                                        position="left"
-                                                       result="/modules/templates-portal/search-results"/>
+                                                       result="/modules/portal-factory_default-templates/search-results"/>
                                     <bootstrapmenuloginform jcr:primaryType="jnt:bootstrapMenuLoginForm" position="right"/>
                                     <bootstrapmenulanguageswitcher jcr:primaryType="jnt:bootstrapMenuLanguageSwitcher"
                                                        position="right"
@@ -424,6 +424,6 @@
 									jcr:primaryType="jnt:searchResults"/>
 				</pagecontent>
 			</search-results>
-		</templates-portal>
+		</portal-factory_default-templates>
 	</modules>
 </content>
