@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <content xmlns:j="http://www.jahia.org/jahia/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0">
 	<modules jcr:primaryType="jnt:modules">
-        <portal-factory_default-templates j:dependencies="bootstrap bootstrap-components contact default event facets portal-factory_user-portal portal-factory_core search teasers"
+        <portal-factory_default-templates j:dependencies="bootstrap bootstrap-components contact default event facets portal-factory_core portal-factory_user-portal search teasers"
 						  j:installedModules="portal-factory_default-templates"
                         j:modulePriority="0"
 						  j:moduleType="templatesSet"
@@ -9,6 +9,60 @@
                         jcr:mixinTypes="jmix:hasExternalProviderExtension"
 						  jcr:primaryType="jnt:module">
                 
+                <portlets jcr:primaryType="jnt:portletFolder"/>
+                <files jcr:primaryType="jnt:folder">
+                    <bootstrap jcr:primaryType="jnt:folder">
+                        <css jcr:primaryType="jnt:folder">
+                            <bootstrap.css jcr:primaryType="jnt:file">
+                                <jcr:content jcr:mimeType="text/css" jcr:primaryType="jnt:resource"/>
+                            </bootstrap.css>
+                        </css>
+                        <img jcr:primaryType="jnt:folder">
+                            <glyphicons-halflings.png j:height="159"
+                                            j:width="469"
+                                            jcr:mixinTypes="jmix:image"
+                                            jcr:primaryType="jnt:file">
+                                <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
+                                <thumbnail jcr:mimeType="application/binary" jcr:primaryType="jnt:resource"/>
+                                <thumbnail2 jcr:mimeType="application/binary" jcr:primaryType="jnt:resource"/>
+                            </glyphicons-halflings.png>
+                            <body-bg.png j:height="400"
+                               j:width="400"
+                               jcr:mixinTypes="jmix:image"
+                               jcr:primaryType="jnt:file">
+                                <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
+                                <thumbnail jcr:mimeType="application/binary" jcr:primaryType="jnt:resource"/>
+                                <thumbnail2 jcr:mimeType="application/binary" jcr:primaryType="jnt:resource"/>
+                            </body-bg.png>
+                            <glyphicons-halflings-white.png j:height="159"
+                                                  j:width="469"
+                                                  jcr:mixinTypes="jmix:image"
+                                                  jcr:primaryType="jnt:file">
+                                <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
+                                <thumbnail jcr:mimeType="application/binary" jcr:primaryType="jnt:resource"/>
+                                <thumbnail2 jcr:mimeType="application/binary" jcr:primaryType="jnt:resource"/>
+                            </glyphicons-halflings-white.png>
+                            <logo.png j:height="100"
+                            j:width="200"
+                            jcr:mixinTypes="jmix:image"
+                            jcr:primaryType="jnt:file">
+                                <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
+                                <thumbnail jcr:mimeType="application/binary" jcr:primaryType="jnt:resource"/>
+                                <thumbnail2 jcr:mimeType="application/binary" jcr:primaryType="jnt:resource"/>
+                            </logo.png>
+                            <logo-small.png j:height="50"
+                                  j:width="168"
+                                  jcr:mixinTypes="jmix:image"
+                                  jcr:primaryType="jnt:file">
+                                <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
+                                <thumbnail jcr:mimeType="application/binary" jcr:primaryType="jnt:resource"/>
+                                <thumbnail2 jcr:mimeType="application/binary" jcr:primaryType="jnt:resource"/>
+                            </logo-small.png>
+                        </img>
+                    </bootstrap>
+                    <less jcr:primaryType="jnt:folder"/>
+                </files>
+                <contents jcr:primaryType="jnt:contentFolder"/>
                 <templates jcr:primaryType="jnt:templatesFolder">
                     <files jcr:primaryType="jnt:folder"/>
                     <contents jcr:primaryType="jnt:contentFolder"/>
@@ -337,70 +391,20 @@
                                     <bootstrapmenusimplesearchform jcr:primaryType="jnt:bootstrapMenuSimpleSearchForm"
                                                        position="left"
                                                        result="/modules/portal-factory_default-templates/search-results"/>
-                                    <bootstrapmenuloginform jcr:primaryType="jnt:bootstrapMenuLoginForm" position="right"/>
                                     <bootstrapmenulanguageswitcher jcr:primaryType="jnt:bootstrapMenuLanguageSwitcher"
                                                        position="right"
                                                        typeOfDisplay="isoLocaleCountryCode"/>
+                                    <bootstrapmenuloginform j:view="menu"
+                                                jcr:mixinTypes="jmix:renderable"
+                                                jcr:primaryType="jnt:bootstrapMenuLoginForm"
+                                                position="right"/>
+                                    <bootstrapmenubookmarkbutton jcr:primaryType="jnt:bootstrapMenuBookmarkButton" position="right"/>
                                 </home>
                             </header>
                         </site>
                     </base>
                 </templates>
                 
-                <files jcr:primaryType="jnt:folder">
-                    <bootstrap jcr:primaryType="jnt:folder">
-                        <css jcr:primaryType="jnt:folder">
-                            <bootstrap.css jcr:primaryType="jnt:file">
-                                <jcr:content jcr:mimeType="text/css" jcr:primaryType="jnt:resource"/>
-                            </bootstrap.css>
-                        </css>
-                        <img jcr:primaryType="jnt:folder">
-                            <glyphicons-halflings.png j:height="159"
-                                            j:width="469"
-                                            jcr:mixinTypes="jmix:image"
-                                            jcr:primaryType="jnt:file">
-                                <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                                <thumbnail jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                                <thumbnail2 jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                            </glyphicons-halflings.png>
-                            <body-bg.png j:height="400"
-                               j:width="400"
-                               jcr:mixinTypes="jmix:image"
-                               jcr:primaryType="jnt:file">
-                                <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                                <thumbnail jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                                <thumbnail2 jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                            </body-bg.png>
-                            <glyphicons-halflings-white.png j:height="159"
-                                                  j:width="469"
-                                                  jcr:mixinTypes="jmix:image"
-                                                  jcr:primaryType="jnt:file">
-                                <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                                <thumbnail jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                                <thumbnail2 jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                            </glyphicons-halflings-white.png>
-                            <logo.png j:height="100"
-                            j:width="200"
-                            jcr:mixinTypes="jmix:image"
-                            jcr:primaryType="jnt:file">
-                                <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                                <thumbnail jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                                <thumbnail2 jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                            </logo.png>
-                            <logo-small.png j:height="50"
-                                  j:width="168"
-                                  jcr:mixinTypes="jmix:image"
-                                  jcr:primaryType="jnt:file">
-                                <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                                <thumbnail jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                                <thumbnail2 jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                            </logo-small.png>
-                        </img>
-                    </bootstrap>
-                    <less jcr:primaryType="jnt:folder"/>
-                </files>
-                <portlets jcr:primaryType="jnt:portletFolder"/>
-                <contents jcr:primaryType="jnt:contentFolder"/>
 			<home j:isHomePage="true"
 				  j:templateName="3col"
 				  jcr:primaryType="jnt:page">
