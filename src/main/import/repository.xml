@@ -8,6 +8,7 @@
 						  j:title="Portal factory - default templates"
                         jcr:mixinTypes="jmix:hasExternalProviderExtension"
 						  jcr:primaryType="jnt:module">
+                
                 <portlets jcr:primaryType="jnt:portletFolder"/>
                 <files jcr:primaryType="jnt:folder">
                     <bootstrap jcr:primaryType="jnt:folder">
@@ -403,7 +404,6 @@
                         </site>
                     </base>
                 </templates>
-                
                 
 			<home j:isHomePage="true"
 				  j:templateName="3col"
