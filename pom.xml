@@ -83,11 +83,11 @@
   <packaging>bundle</packaging>
   <name>Portal factory - default templates</name>
   <description>This is the custom module (portal factory - default templates) for running on a Jahia xCM server.</description>
-    <scm>
-        <connection>scm:git:git@github.com:Jahia/portal-factory_default-templates.git</connection>
-        <developerConnection>scm:git:git@github.com:Jahia/portal-factory_default-templates.git</developerConnection>
-        <url>scm:git:git@github.com:Jahia/portal-factory_default-templates.git</url>
-    </scm>
+  <scm>
+    <connection>scm:git:git@github.com:Jahia/portal-factory_default-templates.git</connection>
+    <developerConnection>scm:git:git@github.com:Jahia/portal-factory_default-templates.git</developerConnection>
+    <url>scm:git:git@github.com:Jahia/portal-factory_default-templates.git</url>
+  </scm>
   <distributionManagement>
     <repository>
       <id>jahia-enterprise-releases</id>
