@@ -147,7 +147,7 @@
         <configuration>
           <instructions>
             <Jahia-Module-Type>templatesSet</Jahia-Module-Type>
-            <Jahia-Depends>default,bootstrap-components,bootstrap,contact,event,facets,search,teasers,portal-factory_core,portal-factory_user-portal</Jahia-Depends>
+            <Jahia-Depends>bookmarks,default,bootstrap,bootstrap-components,contact,event,facets,search,teasers,portal-factory_core,portal-factory_user-portal</Jahia-Depends>
           </instructions>
         </configuration>
       </plugin>

@@ -18,3 +18,5 @@
 
 [jnt:bootstrapMainContent] > jnt:mainContent
  - body (string, richtext[ckeditor.customConfig='$context/modules/sample-bootstrap-templates/javascript/ckconfig.js']) i18n
+
+[jnt:bootstrapMenuBookmarkButton] > jnt:bookmarkButton, jmix:bootstrapNavBarItem
