@@ -66,7 +66,6 @@
 <template:addResources type="javascript" resources="jquery.min.js" />
 <bootstrap:addCSS/>
 
-<template:area path="header"/>
         <div class="wrapper">
             <template:area path="pagecontent"/>
             <div class="copyright">

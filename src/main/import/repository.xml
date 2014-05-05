@@ -120,6 +120,9 @@
                                                           rowType="predefined">
                                         <bootstrap-layer-container-rows-a jcr:primaryType="jnt:contentList">
                                             <col1 jcr:primaryType="jnt:portalArea"/>
+                                            <simple-text jcr:primaryType="jnt:text">
+                                                <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" text="s"/>
+                                            </simple-text>
                                     </bootstrap-layer-container-rows-a>
                                     </bootstrap-layer-container-rows-a>
                                 </portal_x0020_content>
@@ -372,10 +375,7 @@
                                                  layout="12"
                                                  rowType="predefined">
                             <bootstrap-layer-container-rows-a jcr:primaryType="jnt:contentList">
-                        <login j:view="default"
-                      jcr:mixinTypes="jmix:renderable"
-                      jcr:primaryType="jnt:bootstrapMenuLoginForm"
-                      position="left">
+                                <login jcr:primaryType="jnt:bootstrapMenuLoginForm" position="left">
                             <j:translation_en jcr:language="en"
                                     jcr:mixinTypes="mix:title"
                                     jcr:primaryType="jnt:translation"
@@ -388,7 +388,7 @@
                        rowType="predefined">
                                 <row jcr:primaryType="jnt:contentList">
                                     <users-portals-list jcr:primaryType="jnt:userPortals"/>
-                                </row>
+                            </row>
                             </row>
                         </bootstrap-layer-container-rows-a>
                     </pagecontent-side1>
