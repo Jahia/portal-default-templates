@@ -120,9 +120,6 @@
                                                           rowType="predefined">
                                         <bootstrap-layer-container-rows-a jcr:primaryType="jnt:contentList">
                                             <col1 jcr:primaryType="jnt:portalArea"/>
-                                            <simple-text jcr:primaryType="jnt:text">
-                                                <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" text="s"/>
-                                            </simple-text>
                                     </bootstrap-layer-container-rows-a>
                                     </bootstrap-layer-container-rows-a>
                                 </portal_x0020_content>
