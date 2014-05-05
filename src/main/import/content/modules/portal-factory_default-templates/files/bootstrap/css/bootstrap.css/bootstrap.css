@@ -6269,7 +6269,7 @@ a.badge:focus {
   width: 1200px;
   padding: 20px 0 0 0 ;
   min-width: 320px;
-  margin-top: 84px;
+  margin-top: 20px;
 }
 /* = Navbar
 -------------------------------------------------------------- */
@@ -6292,8 +6292,6 @@ a.badge:focus {
 /* = Copyright
 -------------------------------------------------------------- */
 .copyright {
-  background-color: #000;
-  color: #fff;
   font-weight: 300;
   padding: 15px 0;
   font-size: 12px;

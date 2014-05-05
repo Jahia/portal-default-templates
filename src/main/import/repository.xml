@@ -102,28 +102,6 @@
                                     jcr:mixinTypes="mix:title"
                                     jcr:primaryType="jnt:translation"
                                     jcr:title="portal"/>
-                            <header jcr:primaryType="jnt:contentList">
-                                <home inverse="true"
-                           j:styleName="sb-slide"
-                           jcr:primaryType="jnt:bootstrapNavBar"
-                           option="navbar-fixed-top"
-                           responsive="true">
-                                    <j:translation_en jcr:language="en"
-                                          jcr:mixinTypes="mix:title"
-                                          jcr:primaryType="jnt:translation"/>
-                                    <bootstrap-navigation-menu j:maxDepth="2"
-                                                   j:menuItemView="menuElement"
-                                                   j:startLevel="0"
-                                                   jcr:primaryType="jnt:bootstrapNavMenu"/>
-                                    <bootstrapmenuloginform j:view="menu"
-                                                jcr:mixinTypes="jmix:renderable"
-                                                jcr:primaryType="jnt:bootstrapMenuLoginForm"
-                                                position="right"/>
-                                    <bootstrapmenulanguageswitcher jcr:primaryType="jnt:bootstrapMenuLanguageSwitcher"
-                                                       position="right"
-                                                       typeOfDisplay="isoLocaleCountryCode"/>
-                                </home>
-                            </header>
                             <_x0031_-column j:applyOn="jnt:portalTab"
                                   j:defaultTemplate="false"
                                   j:hiddenTemplate="false"
@@ -376,43 +354,44 @@
                                     </bootstrap-container>
                                 </pagecontent>
                             </single-news>
-                            <header jcr:primaryType="jnt:contentList">
-                                <home inverse="true"
-                           jcr:primaryType="jnt:bootstrapNavBar"
-                           option="navbar-fixed-top"
-                           responsive="true">
-                                    <j:translation_en jcr:language="en"
-                                          jcr:mixinTypes="mix:title"
-                                          jcr:primaryType="jnt:translation"/>
-                                    <bootstrap-navigation-menu j:maxDepth="2"
-                                                   j:menuItemView="menuElement"
-                                                   j:startLevel="0"
-                                                   jcr:primaryType="jnt:bootstrapNavMenu"/>
-                                    <bootstrapmenusimplesearchform jcr:primaryType="jnt:bootstrapMenuSimpleSearchForm"
-                                                       position="left"
-                                                       result="/modules/portal-factory_default-templates/search-results"/>
-                                    <bootstrapmenulanguageswitcher jcr:primaryType="jnt:bootstrapMenuLanguageSwitcher"
-                                                       position="right"
-                                                       typeOfDisplay="isoLocaleCountryCode"/>
-                                    <bootstrapmenuloginform j:view="menu"
-                                                jcr:mixinTypes="jmix:renderable"
-                                                jcr:primaryType="jnt:bootstrapMenuLoginForm"
-                                                position="right"/>
-                                    <bootstrapmenubookmarkbutton jcr:primaryType="jnt:bootstrapMenuBookmarkButton" position="right"/>
-                                </home>
-                            </header>
                         </site>
                     </base>
                 </templates>
                 
 			<home j:isHomePage="true"
-				  j:templateName="3col"
+               j:templateName="2cols"
 				  jcr:primaryType="jnt:page">
 				<j:translation_en jcr:language="en"
 								  jcr:mixinTypes="mix:title"
 								  jcr:primaryType="jnt:translation"
 								  jcr:title="Home"/>
 				<bootstrap-column jcr:primaryType="jnt:contentList"/>
+                    <pagecontent-side1 jcr:primaryType="jnt:contentList">
+                        <bootstrap-layer-container-rows-a jcr:mixinTypes="jmix:bootstrapFullComponentRowPredefined"
+                                                 jcr:primaryType="jnt:bootstrapFullComponent"
+                                                 layout="12"
+                                                 rowType="predefined">
+                            <bootstrap-layer-container-rows-a jcr:primaryType="jnt:contentList">
+                        <login j:view="default"
+                      jcr:mixinTypes="jmix:renderable"
+                      jcr:primaryType="jnt:bootstrapMenuLoginForm"
+                      position="left">
+                            <j:translation_en jcr:language="en"
+                                    jcr:mixinTypes="mix:title"
+                                    jcr:primaryType="jnt:translation"
+                                    jcr:title="login"/>
+                        </login>
+                        </bootstrap-layer-container-rows-a>
+                            <row jcr:mixinTypes="jmix:bootstrapFullComponentRowPredefined"
+                       jcr:primaryType="jnt:bootstrapFullComponentRow"
+                       layout="12"
+                       rowType="predefined">
+                                <row jcr:primaryType="jnt:contentList">
+                                    <users-portals-list jcr:primaryType="jnt:userPortals"/>
+                                </row>
+                            </row>
+                        </bootstrap-layer-container-rows-a>
+                    </pagecontent-side1>
 			</home>
 			<search-results j:templateName="1col" jcr:primaryType="jnt:page">
 				<j:translation_en jcr:language="en"
