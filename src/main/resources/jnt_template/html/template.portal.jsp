@@ -59,7 +59,7 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <!-- leaguegothic Type-->
-    <link rel="stylesheet" href="css/webfonts/leaguegothic.css">
+    <template:addResources type="css" resources="leaguegothic.css"/>
 
 </head>
 <body>
