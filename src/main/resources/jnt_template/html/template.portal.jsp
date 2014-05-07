@@ -33,8 +33,12 @@
 	<%-- HTML5 shim, for IE6-8 support of HTML5 elements --%>
 	<template:addResources type="javascript" resources="html5shiv.js" condition="if lt IE 9"/>
 
-	<%-- font-awesome icons --%>
-	<template:addResources type="css" resources="font-awesome.css"/>
+    <!-- font-awesome fa fas -->
+    <template:addResources type="css" resources="css/font-awesome/css/font-awesome.css"/>
+    <!--[if IE 7]>
+    <template:addResources type="css" resources="css/font-awesome/css/font-awesome-ie7.css"/>
+    <![endif]-->
+
 
 	<%-- Fav and touch icons --%>
 	<link rel="shortcut icon" href="<c:url value='${url.currentModule}/icon/favicon.ico'/>" type="image/x-icon">
@@ -54,9 +58,9 @@
 	<meta name="apple-mobile-web-app-capable" content="yes"/>
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-	<%-- Google fonts--%>
-	<c:set var="s" value="${renderContext.request.scheme=='https'?'s':''}"/>
-	<link href='http${s}://fonts.googleapis.com/css?family=Scada' rel='stylesheet' type='text/css'>
+    <!-- leaguegothic Type-->
+    <link rel="stylesheet" href="css/webfonts/leaguegothic.css">
+
 </head>
 <body>
 
