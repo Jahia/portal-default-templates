@@ -244,7 +244,9 @@
                                                        layout="12"
                                                        rowType="predefined">
                                     <bootstrap-layer-container-rows-a jcr:primaryType="jnt:contentList">
-                                <portal-toolbar jcr:primaryType="jnt:portalToolbar">
+                                        <portal-toolbar j:view="menuLogin"
+                                           jcr:mixinTypes="jmix:renderable"
+                                           jcr:primaryType="jnt:portalToolbar">
                                     <j:translation_en jcr:language="en"
                                           jcr:mixinTypes="mix:title"
                                           jcr:primaryType="jnt:translation"
