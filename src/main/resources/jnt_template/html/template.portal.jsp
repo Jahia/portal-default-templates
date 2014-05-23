@@ -34,10 +34,7 @@
 	<template:addResources type="javascript" resources="html5shiv.js" condition="if lt IE 9"/>
 
     <!-- font-awesome fa fas -->
-    <template:addResources type="css" resources="css/font-awesome/css/font-awesome.css"/>
-    <!--[if IE 7]>
-    <template:addResources type="css" resources="css/font-awesome/css/font-awesome-ie7.css"/>
-    <![endif]-->
+    <template:addResources type="css" resources="font-awesome.min.css"/>
 
 
 	<%-- Fav and touch icons --%>
