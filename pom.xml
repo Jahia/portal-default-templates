@@ -80,15 +80,15 @@
     <artifactId>jahia-modules</artifactId>
     <version>7.0.0.0</version>
   </parent>
-  <artifactId>portal-factory_default-templates</artifactId>
+  <artifactId>portal-default-templates</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <name>Portal factory - default templates</name>
   <description>This is the custom module (portal factory - default templates) for running on a Jahia xCM server.</description>
   <scm>
-    <connection>scm:git:git@github.com:Jahia/portal-factory_default-templates.git</connection>
-    <developerConnection>scm:git:git@github.com:Jahia/portal-factory_default-templates.git</developerConnection>
-    <url>scm:git:git@github.com:Jahia/portal-factory_default-templates.git</url>
+    <connection>scm:git:git@github.com:Jahia/portal-default-templates.git</connection>
+    <developerConnection>scm:git:git@github.com:Jahia/portal-default-templates.git</developerConnection>
+    <url>scm:git:git@github.com:Jahia/portal-default-templates.git</url>
   </scm>
   <dependencies>
     <dependency>
@@ -99,8 +99,8 @@
     </dependency>
     <dependency>
       <groupId>org.jahia.modules</groupId>
-      <artifactId>portal-factory_core</artifactId>
-      <version>1.0-SNAPSHOT</version>
+      <artifactId>portal-core</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -139,7 +139,7 @@
         <configuration>
           <instructions>
             <Jahia-Module-Type>templatesSet</Jahia-Module-Type>
-            <Jahia-Depends>bookmarks,default,bootstrap,bootstrap-components,contact,event,facets,search,teasers,portal-factory_core,portal-factory_user-portal</Jahia-Depends>
+            <Jahia-Depends>bookmarks,default,bootstrap,bootstrap-components,contact,event,facets,search,teasers,portal-core,portal-user-portal</Jahia-Depends>
           </instructions>
         </configuration>
       </plugin>
