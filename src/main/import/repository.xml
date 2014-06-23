@@ -2,7 +2,7 @@
 <content xmlns:j="http://www.jahia.org/jahia/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0">
 	<modules jcr:primaryType="jnt:modules">
         <portal-default-templates j:dependencies="bookmarks bootstrap bootstrap-components contact default event facets portal-core portal-user-portal search teasers"
-						  j:installedModules="portal-factory_default-templates"
+						  j:installedModules="portal-default-templates"
                         j:modulePriority="0"
 						  j:moduleType="templatesSet"
 						  j:title="Portal factory - default templates"
