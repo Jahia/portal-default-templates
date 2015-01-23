@@ -89,6 +89,12 @@
     <developerConnection>scm:git:git@github.com:Jahia/portal-default-templates.git</developerConnection>
     <url>scm:git:git@github.com:Jahia/portal-default-templates.git</url>
   </scm>
+
+    <properties>
+        <jahia-module-type>templatesSet</jahia-module-type>
+        <jahia-depends>bookmarks,default,bootstrap,bootstrap-components,contact,event,facets,search,teasers,portal-core,portal-user-portal</jahia-depends>
+    </properties>
+
   <dependencies>
     <dependency>
       <groupId>org.jahia.modules</groupId>
@@ -129,19 +135,4 @@
       <url>https://devtools.jahia.com/nexus/content/groups/public</url>
     </repository>
   </repositories>
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>maven-bundle-plugin</artifactId>
-        <extensions>true</extensions>
-        <configuration>
-          <instructions>
-            <Jahia-Module-Type>templatesSet</Jahia-Module-Type>
-            <Jahia-Depends>bookmarks,default,bootstrap,bootstrap-components,contact,event,facets,search,teasers,portal-core,portal-user-portal</Jahia-Depends>
-          </instructions>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
 </project>
