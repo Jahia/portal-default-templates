@@ -5,14 +5,6 @@
 // Template components
 //---------------------------------------------------------
 
-[jnt:sampleCarousel] > jnt:content, jmix:multimediaContent
-+ * (jnt:sampleCarouselItem)
-
-[jnt:sampleCarouselItem] > jnt:content, mix:title
- - lead (string) i18n mandatory
- - image (weakreference, picker[type='image']) i18n < jnt:file
-  - linkType (string, choicelist[linkInitializer,resourceBundle]) = 'internal' < 'internal', 'external'
-
 [jnt:bootstrapBigText] > jnt:bigText
  - text  (string, richtext[ckeditor.customConfig='$context/modules/sample-bootstrap-templates/javascript/ckconfig.js']) i18n
 
