@@ -80,7 +80,7 @@
     <version>7.0.0.0</version>
   </parent>
   <artifactId>portal-default-templates</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <name>Portal factory - default templates</name>
   <description>This is the custom module (portal factory - default templates) for running on a Jahia xCM server.</description>
