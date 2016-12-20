@@ -65,7 +65,7 @@
 
     <properties>
         <jahia-module-type>templatesSet</jahia-module-type>
-        <jahia-depends>bookmarks,default,bootstrap,bootstrap-components,contact,event,facets,search,teasers,portal-core,portal-user-portal</jahia-depends>
+        <jahia-depends>bootstrap3-components,bootstrap3-core,default,portal-core,portal-user-portal,portal-widgets</jahia-depends>
     </properties>
 
   <dependencies>
