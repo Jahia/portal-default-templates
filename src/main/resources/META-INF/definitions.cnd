@@ -5,4 +5,4 @@
 // Template components
 //---------------------------------------------------------
 
-[jnt:bootstrapMenuBookmarkButton] > jnt:bookmarkButton, jmix:bootstrapNavBarItem
+[jnt:bootstrapMenuBookmarkButton] > jnt:bookmarkButton, bootstrap3mix:navBarItem
