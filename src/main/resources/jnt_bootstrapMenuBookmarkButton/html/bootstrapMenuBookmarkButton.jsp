@@ -4,7 +4,6 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="template" uri="http://www.jahia.org/tags/templateLib" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-<%@ taglib prefix="bootstrap" uri="http://www.jahia.org/tags/bootstrapLib" %>
 <template:addResources type="javascript" resources="jquery.min.js"/>
 <bootstrap:addCSS/>
 
