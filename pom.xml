@@ -65,16 +65,10 @@
 
     <properties>
         <jahia-module-type>templatesSet</jahia-module-type>
-        <jahia-depends>bootstrap3-components,bootstrap3-core,default,portal-core,portal-user-portal,portal-widgets</jahia-depends>
+        <jahia-depends>bookmarks,default,bootstrap3-components,bootstrap3-core,contact,event,facets,search,teasers,portal-core,portal-user-portal</jahia-depends>
     </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>org.jahia.modules</groupId>
-      <artifactId>bootstrap</artifactId>
-      <version>2.0.1</version>
-      <scope>provided</scope>
-    </dependency>
     <dependency>
       <groupId>org.jahia.modules</groupId>
       <artifactId>portal-core</artifactId>

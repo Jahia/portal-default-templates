@@ -64,7 +64,6 @@
 <template:addResources type="css" resources="jahia-old-responsive.css,jahia-old.css"/>
 
 <template:addResources type="javascript" resources="jquery.min.js" />
-<bootstrap:addCSS/>
 
         <div class="wrapper">
             <template:area path="pagecontent"/>
