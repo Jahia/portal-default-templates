@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <content xmlns:j="http://www.jahia.org/jahia/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0">
     <modules jcr:primaryType="jnt:modules">
-        <portal-default-templates j:dependencies="bookmarks bootstrap3-components bootstrap3-core contact default event facets portal-core portal-user-portal search teasers"
+        <portal-default-templates j:dependencies="bookmarks bootstrap3-components bootstrap3-core contact default event facets portal-core portal-user-portal search teasers font-awesome"
                                 j:installedModules="portal-default-templates"
                                 j:modulePriority="0"
                                 j:moduleType="templatesSet"
